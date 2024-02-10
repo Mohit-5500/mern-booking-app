@@ -17,6 +17,7 @@ test('should allow user to sign in', async ({ page }) => {
 
   await expect(page.getByRole("link",{name:"My Bookings"})).toBeVisible()
   await expect(page.getByRole("link",{name:"My Hotels"})).toBeVisible()
+  await expect(page.getByRole("button",{name:"SignOut"})).toBeVisible({timeout:10000})
 });
 
 test("Should allow user to register",async({page})=>{
